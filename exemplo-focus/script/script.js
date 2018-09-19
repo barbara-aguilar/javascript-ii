@@ -18,11 +18,11 @@ const button = document.querySelector(".cadastro__button");
     const optionSelect = inputArea.options
     [inputArea.selectedIndex]
     
-    if(optionSelect.value == "Front-End"){
+    if(inputArea.selectedIndex === 0 ){
         document.querySelector("body").style.backgroundColor = "blue";
-    }else if(optionSelect.value == "Back-End"){
+    }else if(inputArea.selectedIndex === 1){
         document.querySelector("body").style.backgroundColor = "green";
-    }else if(optionSelect.value == "UX Designer"){
+    }else if(inputArea.selectedIndex === 2){
         document.querySelector("body").style.backgroundColor = "pink";
     }else {
         document.querySelector("body").style.backgroundColor = "orange";
@@ -73,7 +73,9 @@ const button = document.querySelector(".cadastro__button");
     if(inputNews.checked === false){
         alert("É uma pena que você não deseja receber nosso conteúdo exclusivo :c")
     }
-    
-    
+   
+    document.querySelector("body").style.backgroundColor = "#fff";
+    const form = this.closest("form");
+    form.submit();
 
     });
